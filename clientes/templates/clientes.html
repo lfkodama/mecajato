@@ -70,7 +70,17 @@
     
         </div>
 
-    
+        <div id="att_cliente">
+            <p></p>
+            <select>
+                {% for cliente in clientes %}
+                <option value="cliente.id">{{cliente.nome}}</option>
+                {% endfor %}
+            </select>    
+        </div>
+
+
+    </div>
     <script src="{% static 'clientes/js/clientes.js' %}"></script>
 
 {% endblock %}
