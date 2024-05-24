@@ -1,6 +1,8 @@
 from django.db import models
 from clientes.models import Cliente
+from secrets import token_hex
 from .choices import ChoicesCategoriasManutencao
+from datetime import datetime
 
 class CategoriaManutencao(models.Model):
     titulo = models.CharField(max_length=3, choices=ChoicesCategoriasManutencao.choices)
@@ -18,4 +20,17 @@ class Servico(models.Model):
     finalizado = models.BooleanField(default=True)
     protocolo = models.CharField(max_length=52, null=True, blank=True)
     
+    def __str__(self) -> str:
+        return self.titulo
     
+    def save(self, *args,  **kwargs):
+        if not self.protocolo:
+            self.protocolo = datetime.now().strftime("%d/%m/%y-%H:%M:%S-") + token_hex(12)
+        super(Servico, self).save(*args, **kwargs)
+
+    def preco_total(self):
+        preco_total = float(0)
+        for categoria in self.categoria_manutencao.all():
+           preco_total += float(categoria.preco)
+           
+        return preco_total 

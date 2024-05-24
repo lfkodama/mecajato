@@ -7,7 +7,7 @@ closeBtn.addEventListener("click", () => {
     menuBtnChange();
 });
 
-searchBtn.addEventListener("click", () => {
+searchBtn.addEventListener("click", ()=>{ 
     sidebar.classList.toggle("open");
     menuBtnChange();
 });
