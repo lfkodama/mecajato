@@ -1,6 +1,6 @@
 from django.db import models
 from clientes.models import Cliente
-from secrets import token_hex
+from secrets import token_hex, token_urlsafe
 from .choices import ChoicesCategoriasManutencao
 from datetime import datetime
 
@@ -19,6 +19,7 @@ class Servico(models.Model):
     data_entrega = models.DateField(null=True)
     finalizado = models.BooleanField(default=True)
     protocolo = models.CharField(max_length=52, null=True, blank=True)
+    identificador = models.CharField(max_length=24, null=True, blank=True)
     
     def __str__(self) -> str:
         return self.titulo
@@ -26,6 +27,10 @@ class Servico(models.Model):
     def save(self, *args,  **kwargs):
         if not self.protocolo:
             self.protocolo = datetime.now().strftime("%d/%m/%y-%H:%M:%S-") + token_hex(12)
+            
+        if not self.identificador:
+            self.identificador = token_urlsafe(16)
+            
         super(Servico, self).save(*args, **kwargs)
 
     def preco_total(self):
