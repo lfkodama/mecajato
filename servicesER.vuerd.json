@@ -1,0 +1,421 @@
+{
+  "canvas": {
+    "version": "2.2.13",
+    "width": 4000,
+    "height": 4000,
+    "scrollTop": 0,
+    "scrollLeft": -28,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": true,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "Service",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "id": "524223d4-af03-4392-b862-596f86ca1ffb",
+        "name": "Customer",
+        "comment": "Customer Table",
+        "columns": [
+          {
+            "id": "3ea6d508-04e9-4c45-9110-b80f0ddade9c",
+            "name": "id",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": true,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "56deb60e-b2ea-43f2-ae91-bd8f5d144cb5",
+            "name": "nome",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "100",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 89,
+          "top": 92,
+          "zIndex": 3,
+          "widthName": 60,
+          "widthComment": 93.0380859375
+        },
+        "visible": true
+      },
+      {
+        "id": "868b8b69-1bbf-46a5-a879-0077246a343c",
+        "name": "ServiceOrder",
+        "comment": "Service Order Table",
+        "columns": [
+          {
+            "id": "89295eb3-5781-4f02-a5a3-b18bbe2ccc11",
+            "name": "protocolo",
+            "comment": "Protocol Number",
+            "dataType": "VARCHAR",
+            "default": "52",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 99.5380859375,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "21a050f1-a3dc-4c0d-b8e7-79edc166a9db",
+            "name": "id",
+            "comment": "Foreign Key - Customer Table",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 120,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 567,
+          "top": 265,
+          "zIndex": 1,
+          "widthName": 78.578125,
+          "widthComment": 116.8798828125
+        },
+        "visible": true
+      },
+      {
+        "id": "92368491-f65f-4126-9ea6-0d6f41ce5ab4",
+        "name": "Worker",
+        "comment": "Workers Table",
+        "columns": [
+          {
+            "id": "d7120ae2-9813-49ff-a55c-9cbda5d38cf1",
+            "name": "id",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": true,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "3de28d49-80e8-4368-9ebe-9b92be8f3015",
+            "name": "firstName",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "50",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "0369f7c9-f3b9-46fe-b519-3f24d7553f26",
+            "name": "lastName",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "50",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "df9dd2cf-aaf9-461f-bf9e-e93a14587809",
+            "name": "",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 63,
+          "top": 418,
+          "zIndex": 2,
+          "widthName": 60,
+          "widthComment": 84.84326171875
+        },
+        "visible": true
+      },
+      {
+        "id": "4c71796b-af0f-4ee6-9e73-9c132cbb52f7",
+        "name": "Company",
+        "comment": "Companies Table",
+        "columns": [
+          {
+            "id": "4af89101-7813-4636-af72-af09d5b9e33b",
+            "name": "id",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": true,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "8708f870-514a-44b9-8a93-a228748ea9dc",
+            "name": "cnpj",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "61647de9-13a2-40b1-8d34-9727eb1624bb",
+            "name": "companyName",
+            "comment": "",
+            "dataType": "VARCHAR",
+            "default": "100",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 89.42626953125,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "3c8c579e-5e28-44aa-9f0f-e7dd146bab59",
+            "name": "aliasName",
+            "comment": "Company Alias Name (Nome Fantasia)",
+            "dataType": "VARCHAR",
+            "default": "100",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63.41357421875,
+              "widthComment": 120,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            }
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 573,
+          "top": 38,
+          "zIndex": 4,
+          "widthName": 60,
+          "widthComment": 102.4453125
+        },
+        "visible": true
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "id": "5bd6494e-4b15-46b1-9b08-98745c7609d4",
+        "identification": false,
+        "relationshipType": "ZeroOne",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "524223d4-af03-4392-b862-596f86ca1ffb",
+          "columnIds": [
+            "3ea6d508-04e9-4c45-9110-b80f0ddade9c"
+          ],
+          "x": 460.6005859375,
+          "y": 147,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "868b8b69-1bbf-46a5-a879-0077246a343c",
+          "columnIds": [
+            "21a050f1-a3dc-4c0d-b8e7-79edc166a9db"
+          ],
+          "x": 567,
+          "y": 320,
+          "direction": "left"
+        },
+        "constraintName": "fk_customer_to_services",
+        "visible": true
+      }
+    ]
+  }
+}
